@@ -3,7 +3,6 @@
 import Portfolio from '../../model/portfolio.js';
 import Holding from '../../model/holding.js';
 import Transaction from '../../model/transaction.js';
-import Price from '../../model/price.js';
 
 /**
  * Create portfolio for logged-in user

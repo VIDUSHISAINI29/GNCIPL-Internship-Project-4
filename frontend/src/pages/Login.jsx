@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
     try {
       await login(email, password);
-      navigate("/user-portfolio");
+      navigate("/");
     } catch (err) {
       alert("Invalid credentials");
     }
