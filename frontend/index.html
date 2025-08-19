@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Portfolio App</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+        <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  </head>
+  <body>
+     <script>
+    tailwind.config = {
+       darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#121212",   // Dark base
+        surface: "#1C1C1C",      // Cards, modals
+        gold: "#D4AF37",         // Primary gold
+        brightGold: "#FFD700",   // Highlight gold
+        positive: "#00C853",     // Profit green
+        negative: "#FF3B30",     // Loss red
+        textLight: "#F5F5F5",    // Light text
+      },
+      boxShadow: {
+        gold: "0 0 15px rgba(212, 175, 55, 0.5)",   // Gold glow
+        "gold-sm": "0 0 8px rgba(212, 175, 55, 0.35)",
+      },
+      transitionDuration: {
+        400: "400ms",
+      },
+    },
+  },
+
+    }
+  </script>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
