@@ -5,7 +5,7 @@ import { AuthContext } from "../context/AuthContext";
 import axios from 'axios'
 
 
-export default function PortfolioCard({ portfolio, onAddHolding }) {
+export default function PortfolioCard({ portfolio, onAddHolding, portfolioUsername }) {
     const { user, token } = useContext(AuthContext);
 
     const navigate = useNavigate();
@@ -20,20 +20,17 @@ export default function PortfolioCard({ portfolio, onAddHolding }) {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setPortfolios(res.data);
-
-            res.data.map((port) => {
-                if(port._id === portfolio._id){
-                    setUsername(port.user.name)
-                }
-            })
+            setUsername(portfolioUsername);
+   
+            
         } catch (err) {
             console.error(err);
         }
     };
-
+    
     useEffect(() => {
         if (token) fetchPortfolios();
-    }, [token]);
+    }, [token, portfolioUsername]);
     return (
         <div className="relative w-full max-w-sm mx-auto">
             <div

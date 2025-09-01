@@ -5,7 +5,7 @@ import { AuthContext } from "../../context/AuthContext";
 export default function CreatePortfolioForm({ isOpen, onClose, onPortfolioCreated }) {
   const { user, token } = useContext(AuthContext);
   const [name, setName] = useState("");
-  const [baseCurrency, setBaseCurrency] = useState("INR");
+  const [baseCurrency, setBaseCurrency] = useState("USD");
   const [inventoryMethod, setInventoryMethod] = useState("FIFO");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

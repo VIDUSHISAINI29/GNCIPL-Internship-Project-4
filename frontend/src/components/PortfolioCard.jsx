@@ -4,14 +4,14 @@ import { PortfolioContext } from "../context/PortfolioContext";
 import { AuthContext } from "../context/AuthContext";
 
 
-export default function PortfolioCard({ portfolio, onAddHolding }) {
+export default function PortfolioCard({ portfolio, onAddHolding, portfolioUsername }) {
   const { user, token } = useContext(AuthContext);
   const navigate = useNavigate();
   const { setSelectedPortfolioId } = useContext(PortfolioContext);
   console.log('card port = ', portfolio)
 
   return (
-    <div className="relative w-full max-w-sm mx-auto">
+    <div className="relative hover:cursor-pointer w-full max-w-sm mx-auto">
       <div
         onClick={() => {
           navigate(`/portfolio/${portfolio._id}`);

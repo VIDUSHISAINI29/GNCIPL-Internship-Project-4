@@ -7,7 +7,7 @@ export default function ProfilePage() {
 
   if (!user) {
     return (
-      <div className="flex items-center justify-center h-screen text-center text-gray-500 dark:text-textLight">
+      <div className="flex items-center justify-center h-screen text-center text-gray-500 ">
         <p>No user data available. Please login.</p>
       </div>
     );
@@ -27,38 +27,38 @@ export default function ProfilePage() {
 
           {/* User Info */}
           <div className="flex-1">
-            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-textLight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">
               {user.name}
             </h2>
-            <p className="mt-2 text-gray-600 dark:text-gray-300">{user.email}</p>
+            <p className="mt-2 text-gray-600 ">{user.email}</p>
             {user.username && (
-              <p className="mt-1 text-gray-500 dark:text-gray-400">@{user.username}</p>
+              <p className="mt-1 text-gray-500 ">@{user.username}</p>
             )}
           </div>
         </div>
 
         {/* Details Section */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="p-4 bg-gray-50 dark:bg-backgroundLight rounded-lg shadow-sm transition-colors hover:shadow-gold">
-            <h3 className="text-lg font-medium text-gray-700 dark:text-gray-200">Name</h3>
-            <p className="mt-1 text-gray-900 dark:text-textLight">{user.name}</p>
+          <div className="p-4 bg-gray-50 dark:bg-backgroundLight rounded-lg shadow-sm transition-colors ">
+            <h3 className="text-lg font-medium text-gray-700 ">Name</h3>
+            <p className="mt-1 text-gray-900 ">{user.name}</p>
           </div>
 
-          <div className="p-4 bg-gray-50 dark:bg-backgroundLight rounded-lg shadow-sm transition-colors hover:shadow-gold">
-            <h3 className="text-lg font-medium text-gray-700 dark:text-gray-200">Email</h3>
-            <p className="mt-1 text-gray-900 dark:text-textLight">{user.email}</p>
+          <div className="p-4 bg-gray-50 dark:bg-backgroundLight rounded-lg shadow-sm transition-colors ">
+            <h3 className="text-lg font-medium text-gray-700 ">Email</h3>
+            <p className="mt-1 text-gray-900 ">{user.email}</p>
           </div>
 
           {user.username && (
-            <div className="p-4 bg-gray-50 dark:bg-backgroundLight rounded-lg shadow-sm transition-colors hover:shadow-gold">
-              <h3 className="text-lg font-medium text-gray-700 dark:text-gray-200">Username</h3>
-              <p className="mt-1 text-gray-900 dark:text-textLight">{user.username}</p>
+            <div className="p-4 bg-gray-50 dark:bg-backgroundLight rounded-lg shadow-sm transition-colors ">
+              <h3 className="text-lg font-medium text-gray-700 ">Username</h3>
+              <p className="mt-1 text-gray-900 ">{user.username}</p>
             </div>
           )}
 
-          <div className="p-4 bg-gray-50 dark:bg-backgroundLight rounded-lg shadow-sm transition-colors hover:shadow-gold">
-            <h3 className="text-lg font-medium text-gray-700 dark:text-gray-200">Joined</h3>
-            <p className="mt-1 text-gray-900 dark:text-textLight">
+          <div className="p-4 bg-gray-50 dark:bg-backgroundLight rounded-lg shadow-sm transition-colors ">
+            <h3 className="text-lg font-medium text-gray-700 ">Joined</h3>
+            <p className="mt-1 text-gray-900 ">
               {new Date(user.createdAt).toLocaleDateString()}
             </p>
           </div>

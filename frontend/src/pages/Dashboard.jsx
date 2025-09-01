@@ -47,6 +47,7 @@ export default function Dashboard() {
               <PortfolioCard
                 key={p._id}
                 portfolio={p}
+                portfolioUsername={p.user.name}
                 onAddHolding={(id) => {
                   setSelectedPortfolioId(id);
                   setHoldingModalOpen(true);

@@ -46,7 +46,7 @@ export default function Transactions() {
                   <th className="py-3 px-4 text-left">Date</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="hover:cursor-pointer">
                 {transactions.length > 0 ? (
                   transactions.map((t) => (
                     <tr

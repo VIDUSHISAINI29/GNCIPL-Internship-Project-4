@@ -4,7 +4,7 @@ export default function HoldingCard({ holding }) {
   const totalValue = holding.qty * holding.avgBuyPrice;
 
   return (
-    <div className="bg-white dark:bg-surface border border-gray-200 dark:border-gray-700 rounded-2xl shadow-gold-sm hover:shadow-gold transition duration-400 transform hover:-translate-y-1 p-6">
+    <div className="bg-white hover:cursor-pointer dark:bg-surface border border-gray-200 dark:border-gray-700 rounded-2xl shadow-gold-sm hover:shadow-gold transition duration-400 transform hover:-translate-y-1 p-6">
       {/* Stock Symbol */}
       <h4 className="text-xl font-bold mb-3 text-gold dark:text-brightGold">
         {holding.stockSymbol || holding.ticker}

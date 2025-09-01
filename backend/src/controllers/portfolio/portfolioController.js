@@ -2,6 +2,7 @@
 // src/controllers/portfolioController.js
 import Portfolio from '../../model/portfolio.js';
 import Holding from '../../model/holding.js';
+import Price from '../../model/price.js'
 import Transaction from '../../model/transaction.js';
 
 /**
@@ -182,8 +183,11 @@ export const getPortfolioByUser = async (req, res, next) => {
 
     // Fetch portfolios for this user
     const portfolios = await Portfolio.find({ user: userId }).lean();
+    // if(!portfolios) {
+    //   return res.json({message: "No portfolio created"});
+    // }
     if (!portfolios || portfolios.length === 0) {
-      return res.status(404).json({ message: 'No portfolios found for this user' });
+      return res.status(404).json({ message: 'No portfolio Created yet.' });
     }
 
     const enrichedPortfolios = await Promise.all(
