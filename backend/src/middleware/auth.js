@@ -12,7 +12,7 @@ export const auth = async(req, res, next) => {
 // console.log('id = ', decoded.userId)
     // Fetch full user document (without password)
     const user = await User.findById(decoded.userId).select('-password');
-    // console.log('user =', user)
+    console.log('user =', user)
     if (!user) return res.status(401).json({ message: 'User not found' });
 
     req.user = user;   // ✅ attach user here
@@ -26,6 +26,6 @@ export const auth = async(req, res, next) => {
             }
     } catch (error) {
         console.log("Error in auth middleware", error);
-        res.status(403).json({message: 'Invalid or expired token'});
+        res.status(403).json({message: error.message});
     }
 }
